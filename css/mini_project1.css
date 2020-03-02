@@ -1,0 +1,154 @@
+@font-face {
+  font-family: 'NunitoReg';
+  src: url(../fonts/Nunito-Regular.ttf) format('truetype');
+}
+
+body {
+  background: #e2f0ed;
+}
+
+html{
+	width: 100%;
+	height: 100%;
+}
+
+video {
+  width: 400px;
+  height: 600px;
+  top: -7%;
+  left: 0px;
+  position: absolute;
+  z-index: -1;
+}
+
+.square {
+  width: 401px;
+  height: 600px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 5px grey;
+}
+
+.box {
+  width: 401px;
+  height: 40px;
+  background: #e2f0ed;
+  position: absolute;
+  top: 57.5%;
+  left: 0px;
+  opacity: 0;
+  animation: box 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+
+h2 {
+  font-family: 'NunitoReg';
+  color: #e2f0ed;
+  position: absolute;
+  top: 10%;
+  left: 37%;
+  font-size: 40px;
+  letter-spacing: .4em;
+  z-index: 2;
+}
+
+a {
+  font-family: 'NunitoReg';
+  color: black;
+  position: absolute;
+  top: 58.1%;
+  left: 40px;
+  font-size: 25px;
+  filter: blur(2px);
+	transition: .6s ease-in-out;
+  z-index: 9;
+}
+
+a:hover {
+	filter: blur(0);
+}
+
+.title {
+  font-family: 'NunitoReg';
+  color: #e2f0ed;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 40px;
+  letter-spacing: .4em;
+  z-index: 9;
+}
+
+h1 {
+  font-family: 'NunitoReg';
+  font-size: 40px;
+  color: #e2f0ed;
+  position: absolute;
+  top: 39%;
+  left: 40%;
+  margin: 0;
+  padding:0;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+h1 span {
+  opacity: 0;
+  display: inline-block;
+  animation: animate 4s linear forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+    filter: blur(10px);
+    }
+  20% {
+    opacity: 0.5;
+    transform: rotateY(60deg);
+    filter: blur(8px);
+    }
+  40% {
+    opacity: 0.75;
+    transform: rotateY(45deg);
+    filter: blur(6px);
+    }
+  60% {
+    opacity: 0.75;
+    transform: rotateY(25deg);
+    filter: blur(4px);
+    }
+  80% {
+    opacity: 0.75;
+    transform: rotateY(15deg);
+    filter: blur(2px);
+    }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes box {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.title{
+  animation: flicker 1.2s;
+}
+@keyframes flicker {
+  0% { color: #e2f0ed; }
+  30% { color: transparent; }
+  60% { color:transparent; }
+  90% { color: #e2f0ed; }
+  100% { color:transparent; }
+}
